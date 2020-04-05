@@ -6,7 +6,7 @@
 # Write an application that reads in a text file and generate a word
 # count for each word it encounters.
 
-# Full Requirements:
+# Full Requirements/TODO:
 # - Sort the output either alphabetically, or by count.
 # - Only print the top X number, e.g. top 100.
 # - It should ignore case and punctuation.

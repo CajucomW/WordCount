@@ -3,8 +3,7 @@
 ############################################
 ## A challenge from KickStart Coding Bootcamp!!!
 
-# Write an application that reads in a text file
-# (see the book text file found in the 4th activity), and generates a word
+# Write an application that reads in a text file and generate a word
 # count for each word it encounters.
 
 # Full Requirements:
