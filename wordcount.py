@@ -9,8 +9,17 @@
 ## Read in the file:
 
 dickins = open('great_expectations.txt').read()
-print(dickins)
 
+## Clean out punctuations and make lower case
+## using .replace and .lower methods
+
+for item in "!@#$%^&*()_+-=`~[]\{}|;',/<>?.:":
+    dickins = dickins.replace(item, '')
+for quote in '"':
+    dickins = dickins.replace(quote, '')
+dickins = dickins.lower()
+
+print(dickins)
 
 # Full Requirements/TODO:
 # - Sort the output either alphabetically, or by count.
