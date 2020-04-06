@@ -31,7 +31,31 @@ dickins = dickins.split()
 ##  and count all the strings
 ## check the length of the list?!?
 total = len(dickins)
-print("Total number of words in this text: ", total)
+print("Total number of words in this text:", total)
+
+## Sort the output either alphabetically, or by count.
+## I'll need the word And the number (pair)
+## use a dictionary
+dictionary = {}
+for word in dickins:
+    ## using .get(), I was able to get the key and assign
+    ## a value to 0
+    dictionary[word] = dictionary.get(word, 0) + 1
+
+word_numb = []
+for key, value in dictionary.items():
+    ## here I changed the order around
+    word_numb.append((value, key))
+
+word_numb.sort(reverse=True)
+#print(word_numb)
+
+## Use string formatting methods to make the output easy to read.
+length = len(word_numb)
+for i in range(length):
+    print(i)
+
+
 
 # Full Requirements/TODO:
 # - Sort the output either alphabetically, or by count.

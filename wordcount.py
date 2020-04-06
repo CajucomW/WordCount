@@ -33,6 +33,30 @@ dickins = dickins.split()
 total = len(dickins)
 print("Total number of words in this text:", total)
 
+## Sort the output either alphabetically, or by count.
+## I'll need the word And the number (pair)
+## use a dictionary
+dictionary = {}
+for word in dickins:
+    ## using .get(), I was able to get the key and assign
+    ## a value to 0
+    dictionary[word] = dictionary.get(word, 0) + 1
+
+word_numb = []
+for key, value in dictionary.items():
+    ## here I changed the order around
+    word_numb.append((value, key))
+
+word_numb.sort(reverse=True)
+#print(word_numb)
+
+## Only print the top X number, e.g. top 100
+## Use string formatting methods to make the output easy to read.
+for value, key in word_numb:
+    if value > 100:
+        print(value, '=', key)
+
+
 # Full Requirements/TODO:
 # - Sort the output either alphabetically, or by count.
 # - Only print the top X number, e.g. top 100.
