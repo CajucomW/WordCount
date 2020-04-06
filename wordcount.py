@@ -8,7 +8,7 @@
 
 ## Read in the file:
 
-dickins = open('great_expectations.txt').read()
+dickins = open('great_expectations_plain.txt').read()
 
 ## Clean out punctuations and make lower case
 ## using .replace() and .lower() methods
@@ -31,7 +31,10 @@ dickins = dickins.split()
 ##  and count all the strings
 ## check the length of the list?!?
 total = len(dickins)
-print("Total number of words in this text:", total)
+print('The text we are looking at today')
+print('is "Great Expectations" by Charles Dickens')
+print("Total number of words in this text is:", total)
+print("The top 10 words mentioned in this text are:")
 
 ## Sort the output either alphabetically, or by count.
 ## I'll need the word And the number (pair)
@@ -44,7 +47,8 @@ for word in dickins:
 
 word_numb = []
 for key, value in dictionary.items():
-    ## here I changed the order around
+    ## here I changed the order around if I want to 
+    ## arrange by value, which is numerical
     word_numb.append((value, key))
 
 word_numb.sort(reverse=True)
@@ -52,9 +56,17 @@ word_numb.sort(reverse=True)
 
 ## Only print the top X number, e.g. top 100
 ## Use string formatting methods to make the output easy to read.
+#for value, key in word_numb:
+#    if value > 100:
+#        print(value, '=', key)
+## this way only prints values > 100.
+## I need Only 100 of the top values
+top = 0
 for value, key in word_numb:
-    if value > 100:
-        print(value, '=', key)
+    if top < 10:
+        print('"' + key + '," mentioned', value, "times.")
+        top += 1
+    
 
 
 # Full Requirements/TODO:
