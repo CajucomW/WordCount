@@ -12,13 +12,16 @@ dickins = open('great_expectations.txt').read()
 
 ## Clean out punctuations and make lower case
 ## using .replace and .lower methods
-
-for item in "!@#$%^&*()_+-=`~[]\{}|;',/<>?.:":
+special_chars = ['"', '!', '@', '#', '$', '%', 
+'^', '&', "*", '(', ')', '_', '+', '-', '=',
+'`', '~', '[', ']', '|', ';', 
+"'", ',', '/', '<', '>', '?', '.', ':', '“', '”']
+for item in special_chars:
     dickins = dickins.replace(item, '')
-for quote in '"':
-    dickins = dickins.replace(quote, '')
 dickins = dickins.lower()
-
+## had a bit of trouble w/ quotations because of 
+## left and right quotation marks '“', '”', are
+## different from regular ones '"'.
 print(dickins)
 
 # Full Requirements/TODO:
