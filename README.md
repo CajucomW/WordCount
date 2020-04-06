@@ -9,6 +9,10 @@ A simple, python-powered, word-counting app that reads in from a text file. I'll
 <!--    <code>python3 wordcount.py</code>-->
 
 <h3>TODO:</h3>
-<h4>04/01/20</h4>
+<h4>04/05/20</h4>
 <ul>
-    <li>for now, get it started (LOL!)</li>
+    <li>Sort the output either alphabetically, or by count</li>
+    <li>Only print the top X number, e.g. top 100</li>
+    <li>It should ignore case and punctuation</li>
+    <li>Use string formatting methods to make the output easy to read</li>
+    </ul>
